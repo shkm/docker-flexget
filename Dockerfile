@@ -1,9 +1,9 @@
-FROM lsiobase/alpine.python:3.7
+FROM lsiobase/alpine.python3:3.9
 
 ENV S6_BEHAVIOUR_IF_STAGE2_FAILS="2"
 
 # Set python to use utf-8 rather than ascii.
-ENV PYTHONIOENCODING="UTF-8"
+ENV LANG C.UTF-8
 
 # Add edge/testing repositories.
 RUN printf "\
